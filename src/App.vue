@@ -34,13 +34,26 @@
 									source(media="(min-width: 992px)" srcset="./assets/img/hero_watch.png")
 									source(media="(max-width: 991px)" srcset="./assets/img/hero_watch_m.png")
 									img(src="./assets/img/hero_watch.png" alt="")
-			section(aria-labelledby='features_title')
+			section.features(aria-labelledby='features_title')
 				h2#features_title.sr-only Main features
-				ul
-					li Leather strap
-					li Water resistant
-					li Spring Drive
-					li Warranty
+				b-container
+					ul.features-list.row
+						li.features-list__item.col-6.col-md-3.d-flex.justify-content-center.align-items-center.flex-wrap
+							span.features-list__item-icon
+								img(src="./assets/img/leather_icon.svg", alt="")
+							span Leather strap
+						li.features-list__item.col-6.col-md-3.d-flex.justify-content-center.align-items-center.flex-wrap
+							span.features-list__item-icon
+								img(src="./assets/img/water_resistant.svg", alt="")
+							span Water resistant
+						li.features-list__item.col-6.col-md-3.d-flex.justify-content-center.align-items-center.flex-wrap
+							span.features-list__item-icon
+								img(src="./assets/img/spring_drive_icon.svg", alt="")
+							span Spring Drive
+						li.features-list__item.col-6.col-md-3.d-flex.justify-content-center.align-items-center.flex-wrap
+							span.features-list__item-icon
+								img(src="./assets/img/warranty_icon.svg", alt="")
+							span Warranty
 			aside(aria-labelledby='asides_title')
 				h2#asides_title.sr-only Articles
 				section(aria-labelledby='aside_card_title_1')
@@ -181,7 +194,7 @@ button.navbar-toggler .navbar-toggler-icon {
 }
 
 .hero__title span {
-	color: #C4A37B;
+	color: rgba(196, 163, 123, 0.99);
 
 	@include media('<desktop') {
 		display: block;
@@ -193,6 +206,54 @@ button.navbar-toggler .navbar-toggler-icon {
 	line-height: 28px;
 	margin-bottom: 40px;
 	max-width: 440px;
+}
+
+.features {
+	background-color: #292929;
+}
+
+.features-list {
+	list-style: none;
+	padding: 0;
+}
+
+.features-list__item {
+	color: #fff;
+	font-weight: 600;
+	font-size: 18px;
+	padding: 38px;
+	text-align: center;
+	position: relative;
+
+	&:not(:first-of-type)::after {
+		@include media('>=tablet') {
+			content: "";
+			background: rgba(196, 163, 123, 0.3);
+			position: absolute;
+			top: 38px;
+			left: 0;
+			width: 1px;
+			height: calc(100% - 76px);
+		}
+	}
+
+	&:nth-child(n+1) {
+		@include media('<tablet') {
+			border-bottom: 1px solid rgba(196, 163, 123, 0.3);
+		}
+	}
+
+	&:nth-child(2n+1) {
+		@include media('<tablet') {
+			border-right: 1px solid rgba(196, 163, 123, 0.3);
+		}
+	}
+}
+
+
+.features-list__item-icon {
+	flex: 100%;
+	margin-bottom: 20px;
 }
 
 </style>
