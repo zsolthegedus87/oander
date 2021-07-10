@@ -1,0 +1,14 @@
+@import 'include-media';
+@import 'breakpoints';
+
+$mobile-only: 'max-width: 767px';
+$tablet: 'min-width: 768px';
+$tablet-max: 'max-width: 768px';
+$desktop: 'min-width: 960px';
+$desktop-max: 'max-width: 960px';
+$desktop-lg: 'min-width: 1280px';
+$desktop-lg-max: 'max-width: 1280px';
+$desktop-xl: 'min-width: 1440px';
+$desktop-xl-max: 'max-width: 1440px';
+
+

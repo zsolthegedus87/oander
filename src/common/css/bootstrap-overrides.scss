@@ -6,5 +6,21 @@ $container-max-widths: (
 	xxl: 1371px
 );
 
+$font-family-base: Montserrat;
+$font-size-base: 1rem;
+
+.btn.btn-primary {
+	background-color: #000;
+	border: none;
+	border-radius: 0;
+	color: #fff;
+	font-size: 18px;
+	padding: 12px 70px;
+
+	&:hover {
+		background: #111;
+	}
+}
+
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
 @import 'node_modules/bootstrap-vue/src/index.scss';
