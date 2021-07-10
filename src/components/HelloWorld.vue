@@ -1,40 +1,5 @@
 <template lang="pug">
 	div
-		header
-			a(href='#')
-				| svg logo here
-			nav(role='navigation')
-				ul
-					li
-						a(href='#') Shop
-						a(href='#') Collection
-						a(href='#') Accessories
-						a(href='#') Gift guide
-						a(href='#') Blog
-						a(href='#') Contact
-		main(role='main')
-			section(aria-labelledby='hero_title_1')
-				h1#hero_title_1
-					| The message is a simple.
-					span That's It.
-				p
-					| This is watch maintains their signature aesthetic as it pushes the boundaries of design possibility. Despite
-					| its almost effortless appearance, Seconds is the result of a careful and imaginative creative process.
-				a#hero_button(href='#' aria-labelledby='hero_button hero_title_1') Buy now
-				picture
-					| picture background
-			section(aria-labelledby='features_title')
-				h2#features_title.sr-only Main features
-				ul
-					li Leather strap
-					li Water resistant
-					li Spring Drive
-					li Warranty
-			aside(aria-labelledby='asides_title')
-				h2#asides_title.sr-only Articles
-				section(aria-labelledby='aside_card_title_1')
-					h3#aside_card_title_1 Going Upstream: The Montblanc 1858 Chronograph Tachymeter Limited
-					a#aside_card_button(href='#' aria-labelledby='aside_card_button aside_card_title_1') Read more
 		footer
 			nav(aria-labelledby='footer_title')
 				h2#footer_title Footer navigations
@@ -107,7 +72,12 @@
 							span(v-if='!$v.user.email.email') Email is invalid
 					.form-group
 						button.btn.btn-primary Register
-
+			div
+				b-nav(pills='')
+					b-nav-item(active='') Active
+					b-nav-item Link
+					b-nav-item Another Link
+					b-nav-item(disabled='') Disabled
 			form(@submit.prevent="handleSubmit")
 					h3 Subscribe to the newsletter
 					div
@@ -128,7 +98,6 @@
 </template>
 
 <script>
-
 import { required, email } from "vuelidate/lib/validators";
 
 export default {
@@ -169,6 +138,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.nav {
+	background: red;
+}
+
 h3 {
 	margin: 40px 0 0;
 	border: 1px;
