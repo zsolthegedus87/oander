@@ -54,22 +54,20 @@
 							span.features-list__item-icon
 								img(src="./assets/img/warranty_icon.svg", alt="")
 							span Warranty
-			aside(aria-labelledby='asides_title')
-				h2#asides_title.sr-only Articles
-				section(aria-labelledby='aside_card_title_1')
-					h3#aside_card_title_1 Going Upstream: The Montblanc 1858 Chronograph Tachymeter Limited
-					a#aside_card_button(href='#' aria-labelledby='aside_card_button aside_card_title_1') Read more
+		Articles
 		HelloWorld
 
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
+import Articles from "./components/Articles.vue";
 
 export default {
 	name: "App",
 	components: {
-		HelloWorld
+		HelloWorld,
+		Articles
 	}
 };
 </script>
