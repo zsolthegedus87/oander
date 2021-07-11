@@ -41,3 +41,8 @@ $link-color:  #c4a37b;
 
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
 @import 'node_modules/bootstrap-vue/src/index.scss';
+
+hr {
+	border-top: 1px solid rgba(46, 46, 46, 0.15);
+	margin: 0 0 39px;
+}

@@ -15,7 +15,7 @@ aside(aria-labelledby='asides_title')
 import axios from 'axios';
 
 export default {
-	name: 'HelloWorld',
+	name: 'Articles',
 	data() {
 		return {
 			articles: null
@@ -31,8 +31,6 @@ export default {
 	}
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import '../common/css/queries.scss';
 

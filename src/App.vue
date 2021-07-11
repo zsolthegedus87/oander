@@ -55,18 +55,19 @@
 								img(src="./assets/img/warranty_icon.svg", alt="")
 							span Warranty
 		Articles
-		HelloWorld
+		hr
+		Footer
 
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Footer from "./components/Footer.vue";
 import Articles from "./components/Articles.vue";
 
 export default {
 	name: "App",
 	components: {
-		HelloWorld,
+		Footer,
 		Articles
 	}
 };
@@ -190,7 +191,7 @@ button.navbar-toggler .navbar-toggler-icon {
 }
 
 .hero__title span {
-	color: rgba(196, 163, 123, 0.99);
+	color: rgba(196, 163, 123, .99);
 
 	@include media('<desktop') {
 		display: block;
