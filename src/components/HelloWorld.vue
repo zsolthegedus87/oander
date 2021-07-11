@@ -101,7 +101,7 @@
 import { required, email } from "vuelidate/lib/validators";
 
 export default {
-	name: 'HelloWorld',
+	name: "HelloWorld",
 	data() {
 		return {
 			user: {

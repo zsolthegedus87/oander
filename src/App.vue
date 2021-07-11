@@ -111,6 +111,8 @@ button.navbar-toggler .navbar-toggler-icon {
 
 	@include media('>=desktop') {
 		height: 83px;
+		margin-left: -55px;
+		margin-right: -55px;
 	}
 }
 
@@ -159,10 +161,6 @@ button.navbar-toggler .navbar-toggler-icon {
 
 .hero-content {
 	max-width: 460px;
-
-	@include media('>=desktop') {
-		margin: 0 41px;
-	}
 }
 
 .hero-picture {
@@ -226,7 +224,7 @@ button.navbar-toggler .navbar-toggler-icon {
 	&:not(:first-of-type)::after {
 		@include media('>=tablet') {
 			content: "";
-			background: rgba(196, 163, 123, 0.3);
+			background: rgba(196, 163, 123, .3);
 			position: absolute;
 			top: 38px;
 			left: 0;
@@ -237,13 +235,13 @@ button.navbar-toggler .navbar-toggler-icon {
 
 	&:nth-child(n+1) {
 		@include media('<tablet') {
-			border-bottom: 1px solid rgba(196, 163, 123, 0.3);
+			border-bottom: 1px solid rgba(196, 163, 123, .3);
 		}
 	}
 
 	&:nth-child(2n+1) {
 		@include media('<tablet') {
-			border-right: 1px solid rgba(196, 163, 123, 0.3);
+			border-right: 1px solid rgba(196, 163, 123, .3);
 		}
 	}
 }
