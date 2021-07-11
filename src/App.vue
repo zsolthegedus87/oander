@@ -112,6 +112,9 @@ button.navbar-toggler .navbar-toggler-icon {
 
 	@include media('>=desktop') {
 		height: 83px;
+	}
+
+	@include media('>=desktop-lg') {
 		margin-left: -55px;
 		margin-right: -55px;
 	}
@@ -162,6 +165,9 @@ button.navbar-toggler .navbar-toggler-icon {
 
 .hero-content {
 	max-width: 460px;
+	@include media('<tablet') {
+		margin-right: 80px;
+	}
 }
 
 .hero-picture {
