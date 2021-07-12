@@ -34,7 +34,7 @@ $link-color: #c4a37b;
 	font-weight: 600;
 
 	&::after {
-		@include arrow()
+		@include arrow();
 	}
 }
 
