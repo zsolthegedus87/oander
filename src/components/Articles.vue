@@ -10,7 +10,6 @@ aside(aria-labelledby='asides_title')
 						h3(:id='`aside_card_title_${index}`') {{article.title}}
 						a.link-primary(href='#' :id='`aside_card_button_${index}`' :aria-labelledby='`aside_card_button_${index} aside_card_title_${index}`') Read more
 </template>
-
 <script>
 import axios from 'axios';
 
@@ -33,6 +32,7 @@ export default {
 </script>
 <style scoped lang="scss">
 @import '../common/css/queries.scss';
+@import '../common/css/variables.scss';
 
 aside {
 	margin: 30px 0;
@@ -43,7 +43,7 @@ aside {
 }
 
 section {
-	border: 1px solid rgba(41, 41, 41, .1);
+	border: 1px solid rgba(41, 41, 41, 0.1);
 	position: relative;
 
 	@include media('>=tablet') {
@@ -82,7 +82,7 @@ img {
 }
 
 h3 {
-	color: #5a5a5a;
+	color: $heading-main;
 	font-size: 14px;
 	font-weight: bold;
 	line-height: 24px;

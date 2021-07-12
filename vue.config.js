@@ -6,5 +6,6 @@ module.exports = {
 				args[0].title = "Oander test HZS";
 				return args;
 			});
-	}
+	},
+	publicPath: './'
 };

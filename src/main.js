@@ -2,6 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import Vuelidate from "vuelidate";
 import BootstrapVue from "bootstrap-vue";
+import 'picturefill';
 
 Vue.config.productionTip = false;
 Vue.use(Vuelidate);

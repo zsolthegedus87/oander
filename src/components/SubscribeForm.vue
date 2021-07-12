@@ -4,15 +4,15 @@ form.subscribe(@submit.prevent="handleSubmit")
 	.subscribe__row
 		.subscribe__col(:class="{ 'has-error': $v.user.firstName.$error }")
 			label#subscribe-fname-label.sr-only(for='subscribe-fname-input') First Name
-			input#subscribe-fname-input(type='text', v-model="user.firstName", @blur="$v.user.firstName.$touch()", aria-labelledby='subscribe-fname-label', aria-describedby="subscribe-fname-error", placeholder="First name")
+			input#subscribe-fname-input(type='text', v-model="user.firstName", @blur="$v.user.firstName.$touch()", aria-labelledby='subscribe-fname-label', aria-describedby="subscribe-fname-error", :aria-invalid="$v.user.firstName.$error ? true : false", placeholder="First name")
 			span#subscribe-fname-error.subscribe__error-msg(aria-live="assertive", v-if="$v.user.firstName.$dirty && !$v.user.firstName.required") First name is required
 		.subscribe__col(:class="{ 'has-error': $v.user.lastName.$error }")
 			label#subscribe-lname-label.sr-only(for='subscribe-lname-input') Last Name
-			input#subscribe-lname-input(type='text', v-model="user.lastName", @blur="$v.user.lastName.$touch()", aria-labelledby='subscribe-lname-label', aria-describedby="subscribe-lname-error", placeholder="Last name")
+			input#subscribe-lname-input(type='text', v-model="user.lastName", @blur="$v.user.lastName.$touch()", aria-labelledby='subscribe-lname-label', aria-describedby="subscribe-lname-error", :aria-invalid="$v.user.lastName.$error ? true : false", placeholder="Last name")
 			span#subscribe-lname-error.subscribe__error-msg(aria-live="assertive", v-if="$v.user.lastName.$dirty && !$v.user.lastName.required") Last name is required
 	.subscribe__row.subscribe__row--wide(:class="{ 'has-error': $v.user.email.$error }")
 		label#subscribe-email-label.sr-only(for='subscribe-email-input') Email address
-		input#subscribe-email-input(type='email',v-model="user.email", @blur="$v.user.email.$touch()", aria-labelledby='subscribe-email-label', aria-describedby="subscribe-email-error", placeholder="Email")
+		input#subscribe-email-input(type='email',v-model="user.email", @blur="$v.user.email.$touch()", aria-labelledby='subscribe-email-label', aria-describedby="subscribe-email-error", :aria-invalid="$v.user.email.$error ? true : false", placeholder="Email")
 		span#subscribe-email-error.subscribe__error-msg(aria-live="assertive", v-if="$v.user.email.$dirty && !$v.user.email.required") Email address is required
 		span#subscribe-email-error.subscribe__error-msg(aria-live="assertive", v-if="$v.user.email.$dirty && !$v.user.email.email") Email address is invalid
 	.subscribe__row.subscribe__row--wide
@@ -59,6 +59,7 @@ export default {
 </script>
 <style scoped lang="scss">
 @import '../common/css/queries.scss';
+@import '../common/css/variables.scss';
 
 .subscribe {
 	@include media('<tablet') {
@@ -84,6 +85,12 @@ export default {
 
 .subscribe__col {
 	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+
+	@include media('>=tablet') {
+		width: 50%;
+	}
 }
 
 input {
@@ -114,16 +121,25 @@ input {
 }
 
 .has-error input {
-	border-color: #ff0000;
+	border-color: $error;
 }
 
 .subscribe__error-msg {
-	color: #ff0000;
+	color: $error;
 	font-size: 14px;
+	text-align: left;
+
+	@include media('<tablet') {
+		margin: -14px 0px 10px;
+	}
 }
 
 .subscribe__row--wide .subscribe__error-msg {
 	flex-basis: 100%;
+
+	@include media('<tablet') {
+		display: block;
+	}
 }
 
 .subscribe__submit {
