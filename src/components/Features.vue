@@ -21,8 +21,8 @@ section.features(aria-labelledby='features_title')
 				span Warranty
 </template>
 <style scoped lang="scss">
-@import '../common/css/queries.scss';
-@import '../common/css/variables.scss';
+@import "../common/css/queries.scss";
+@import "../common/css/variables.scss";
 
 .features {
 	background-color: #292929;
@@ -42,7 +42,7 @@ section.features(aria-labelledby='features_title')
 	position: relative;
 
 	&:not(:first-of-type)::after {
-		@include media('>=tablet') {
+		@include media(">=tablet") {
 			content: "";
 			background: $ui-secondary;
 			position: absolute;
@@ -53,23 +53,21 @@ section.features(aria-labelledby='features_title')
 		}
 	}
 
-	&:nth-child(n+1) {
-		@include media('<tablet') {
+	&:nth-child(n + 1) {
+		@include media("<tablet") {
 			border-bottom: 1px solid $ui-secondary;
 		}
 	}
 
-	&:nth-child(2n+1) {
-		@include media('<tablet') {
+	&:nth-child(2n + 1) {
+		@include media("<tablet") {
 			border-right: 1px solid $ui-secondary;
 		}
 	}
 }
 
-
 .features-list__item-icon {
 	flex: 100%;
 	margin-bottom: 20px;
 }
-
 </style>

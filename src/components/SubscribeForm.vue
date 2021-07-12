@@ -29,21 +29,21 @@ export default {
 			user: {
 				firstName: "",
 				lastName: "",
-				email: ""
+				email: "",
 			},
 			submitted: false,
-			hasError: false
-		}
+			hasError: false,
+		};
 	},
 	props: {
-		msg: String
+		msg: String,
 	},
 	validations: {
 		user: {
 			firstName: { required },
 			lastName: { required },
-			email: { required, email }
-		}
+			email: { required, email },
+		},
 	},
 	methods: {
 		handleSubmit() {
@@ -53,28 +53,28 @@ export default {
 				return;
 			}
 			alert("SUCCESS!!" + JSON.stringify(this.user));
-		}
-	}
+		},
+	},
 };
 </script>
 <style scoped lang="scss">
-@import '../common/css/queries.scss';
-@import '../common/css/variables.scss';
+@import "../common/css/queries.scss";
+@import "../common/css/variables.scss";
 
 .subscribe {
-	@include media('<tablet') {
+	@include media("<tablet") {
 		margin-bottom: 30px;
 	}
 }
 
 .subscribe__row {
-	@include media('>=tablet') {
+	@include media(">=tablet") {
 		display: flex;
 		flex-direction: row;
 		margin-bottom: 18px;
 	}
 
-	@include media('>=desktop-lg') {
+	@include media(">=desktop-lg") {
 		justify-content: space-between;
 	}
 }
@@ -88,7 +88,7 @@ export default {
 	flex-wrap: wrap;
 	width: 100%;
 
-	@include media('>=tablet') {
+	@include media(">=tablet") {
 		width: 50%;
 	}
 }
@@ -100,11 +100,11 @@ input {
 	padding: 16px 12px;
 	width: 100%;
 
-	@include media('<tablet') {
+	@include media("<tablet") {
 		margin-bottom: 18px;
 	}
 
-	@include media('>=desktop') {
+	@include media(">=desktop") {
 		max-width: 192px;
 	}
 }
@@ -115,7 +115,7 @@ input {
 }
 
 .subscribe__col:first-child input {
-	@include media('>=tablet') {
+	@include media(">=tablet") {
 		margin-right: 28px;
 	}
 }
@@ -129,7 +129,7 @@ input {
 	font-size: 14px;
 	text-align: left;
 
-	@include media('<tablet') {
+	@include media("<tablet") {
 		margin: -14px 0px 10px;
 	}
 }
@@ -137,7 +137,7 @@ input {
 .subscribe__row--wide .subscribe__error-msg {
 	flex-basis: 100%;
 
-	@include media('<tablet') {
+	@include media("<tablet") {
 		display: block;
 	}
 }
@@ -146,5 +146,4 @@ input {
 	padding: 7px;
 	width: 100%;
 }
-
 </style>

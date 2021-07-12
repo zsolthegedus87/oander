@@ -22,7 +22,7 @@ export default {
 		Hero,
 		Features,
 		Articles,
-		Footer
-	}
+		Footer,
+	},
 };
 </script>

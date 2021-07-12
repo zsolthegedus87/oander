@@ -17,7 +17,7 @@ header.header
 							b-nav-item.navbar__item(href='#') Contact
 </template>
 <style scoped lang="scss">
-@import '../common/css/queries.scss';
+@import "../common/css/queries.scss";
 
 .container--header {
 	max-width: 1371px;
@@ -30,7 +30,7 @@ header.header
 .navbar-brand img {
 	width: 87px;
 
-	@include media('>=desktop') {
+	@include media(">=desktop") {
 		width: 120px;
 	}
 }
@@ -44,7 +44,7 @@ button.navbar-toggler .navbar-toggler-icon {
 }
 
 .navbar-collapse {
-	@include media('<desktop') {
+	@include media("<desktop") {
 		background: #fff;
 		margin: 5px -20px 0;
 		padding: 10px 20px;
@@ -57,7 +57,7 @@ button.navbar-toggler .navbar-toggler-icon {
 	padding: 9px 40px;
 	z-index: 1;
 
-	@include media('>=desktop') {
+	@include media(">=desktop") {
 		height: 83px;
 	}
 }
@@ -69,7 +69,7 @@ button.navbar-toggler .navbar-toggler-icon {
 }
 
 .navbar-nav {
-	@include media('>=desktop') {
+	@include media(">=desktop") {
 		align-items: center;
 	}
 }
@@ -77,6 +77,6 @@ button.navbar-toggler .navbar-toggler-icon {
 .navbar-nav .navbar__item a.nav-link {
 	font-size: 18px;
 	font-weight: 600;
-	color: #2E2E2E;
+	color: #2e2e2e;
 }
 </style>

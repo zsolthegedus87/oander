@@ -18,8 +18,8 @@ section.hero(aria-labelledby='hero_title_1')
 						img(src="../assets/img/hero_watch.png" alt="")
 </template>
 <style lang="scss">
-@import '../common/css/queries.scss';
-@import '../common/css/variables.scss';
+@import "../common/css/queries.scss";
+@import "../common/css/variables.scss";
 
 .hero {
 	background: #242123;
@@ -28,7 +28,7 @@ section.hero(aria-labelledby='hero_title_1')
 	position: relative;
 	z-index: 0;
 
-	@include media('>=desktop') {
+	@include media(">=desktop") {
 		margin-top: -83px;
 		padding: 215px 0 125px;
 	}
@@ -44,7 +44,7 @@ section.hero(aria-labelledby='hero_title_1')
 		height: 700px;
 		z-index: -1;
 
-		@include media('>=desktop') {
+		@include media(">=desktop") {
 			background: url("../assets/img/background_pattern.png") no-repeat;
 			width: 100%;
 			left: -44%;
@@ -54,7 +54,7 @@ section.hero(aria-labelledby='hero_title_1')
 
 .hero-content {
 	max-width: 460px;
-	@include media('<tablet') {
+	@include media("<tablet") {
 		margin-right: 80px;
 	}
 }
@@ -65,7 +65,7 @@ section.hero(aria-labelledby='hero_title_1')
 	right: -20px;
 	transform: translateY(-50%);
 
-	@include media('>=desktop') {
+	@include media(">=desktop") {
 		left: 41%;
 		top: 50%;
 		transform: translateY(-50%);
@@ -79,16 +79,16 @@ section.hero(aria-labelledby='hero_title_1')
 	line-height: 38px;
 	margin-bottom: 30px;
 
-	@include media('>=desktop') {
+	@include media(">=desktop") {
 		font-size: 50px;
 		line-height: 62px;
 	}
 }
 
 .hero__title span {
-	color: rgba(196, 163, 123, .99);
+	color: rgba(196, 163, 123, 0.99);
 
-	@include media('<desktop') {
+	@include media("<desktop") {
 		display: block;
 	}
 }
