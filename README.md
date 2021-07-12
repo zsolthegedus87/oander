@@ -1,4 +1,4 @@
-# oander
+# Oander HomeWork
 
 ## Project setup
 ```
@@ -18,6 +18,8 @@ yarn build
 ### Lints and fixes files
 ```
 yarn lint
+yarn stylelint
+yarn stylelint-fix
 ```
 
 ### Customize configuration
